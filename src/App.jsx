@@ -1,9 +1,10 @@
 import React from 'react';
+import UseRefExample1 from './components/UseRefExample1';
 
 const App = () => {
   return (
     <>
-      <h1>Advanced Hooks</h1>
+      <UseRefExample1 />
     </>
   );
 };
