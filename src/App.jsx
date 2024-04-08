@@ -1,10 +1,10 @@
 import React from 'react';
-import UseRefExample1 from './components/UseRefExample1';
+import UseRefExample2 from './components/UseRefExample2';
 
 const App = () => {
   return (
     <>
-      <UseRefExample1 />
+      <UseRefExample2 />
     </>
   );
 };
