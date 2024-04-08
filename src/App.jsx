@@ -1,4 +1,3 @@
-import React from 'react';
 import UseRefExample2 from './components/UseRefExample2';
 
 const App = () => {
