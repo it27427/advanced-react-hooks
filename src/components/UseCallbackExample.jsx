@@ -4,9 +4,9 @@ import Button from './Button';
 const UseCallbackExample = () => {
   const [tasks, setTasks] = useState([]);
 
-  const addTask = () => {
+  const addTask = useCallback(() => {
     setTasks((prevState) => [...prevState, 'Some Task']);
-  };
+  });
 
   return (
     <div className='container'>
