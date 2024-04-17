@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 const CusomHookExample = () => {
-  const [task, setTask] = useState('');
+  const [task, setTask] = useLocalStorage('task', '');
 
   return (
     <div className='container'>
