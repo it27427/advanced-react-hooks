@@ -1,7 +1,7 @@
 import useFetch from '../hooks/useFetch';
 
 const CustomHook = () => {
-  const { data, loading, error } = useFetch(
+  const { data, loading } = useFetch(
     'https://jsonplaceholder.typicode.com//posts',
     {}
   );
