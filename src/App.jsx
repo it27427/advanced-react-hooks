@@ -1,9 +1,9 @@
-import CustomHook from './components/CustomHook';
+import CusomHookExample from './components/CusomHookExample';
 
 const App = () => {
   return (
     <>
-      <CustomHook />
+      <CusomHookExample />
     </>
   );
 };
