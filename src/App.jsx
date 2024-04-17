@@ -1,9 +1,9 @@
-import UseMemoExample from './components/UseMemoExample';
+import UseCallbackExample from './components/UseCallbackExample';
 
 const App = () => {
   return (
     <>
-      <UseMemoExample />
+      <UseCallbackExample />
     </>
   );
 };
