@@ -2,13 +2,26 @@ import useLocalStorage from '../hooks/useLocalStorage';
 
 const CusomHookExample = () => {
   const [task, setTask] = useLocalStorage('task', '');
+  const [tasks, setTasks] = useLocalStorage('tasks', []);
+
+  const handleTask = (e) => {
+    e.preventDefault();
+
+    const taskObj = {
+      task,
+      completed: false,
+      date: new Date().toLocaleDateString(),
+    };
+
+    setTasks([...tasks, taskObj]);
+  };
 
   return (
     <div className='container'>
       <div className='row'>
         <div className='col-md-6 mx-md-auto'>
           <div className='py-5'>
-            <form className='d-flex flex-column gap-3'>
+            <form onSubmit={handleTask} className='d-flex flex-column gap-3'>
               <div className='d-flex flex-column gap-2'>
                 <label htmlFor='task' className='form-label'>
                   Task
@@ -27,6 +40,16 @@ const CusomHookExample = () => {
                 Add Task
               </button>
             </form>
+
+            <hr className='mb-4' />
+
+            <div className='pb-4'>
+              <ul>
+                {tasks.map((task, i) => (
+                  <li key={i}>{task.task}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
