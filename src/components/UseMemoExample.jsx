@@ -10,7 +10,11 @@ const UseMemoExample = () => {
     renders.current += 1;
   });
 
-  const handleReRender = () => {};
+  const handleReRender = () => {
+    setInc((prevState) => {
+      return prevState + 1;
+    });
+  };
 
   return (
     <div className='container'>
