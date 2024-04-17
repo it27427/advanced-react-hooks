@@ -16,6 +16,9 @@ const UseMemoExample = () => {
     });
   };
 
+  // const sqrt = getSqrt(number);
+  const sqrt = useMemo(() => getSqrt(number), [number]);
+
   return (
     <div className='container'>
       <div className='row'>
@@ -27,6 +30,10 @@ const UseMemoExample = () => {
               onChange={(e) => setNumber(e.target.value)}
               className='form-control mb-3'
             />
+
+            <h3 className='mb-3'>
+              The sqrt of {number} is {sqrt}
+            </h3>
 
             <button
               onClick={handleReRender}
@@ -43,5 +50,14 @@ const UseMemoExample = () => {
     </div>
   );
 };
+
+function getSqrt(n) {
+  for (let i = 0; i <= 10000; i++) {
+    console.log(i);
+  }
+
+  console.log('Expensive Function Called!');
+  return Math.sqrt(n);
+}
 
 export default UseMemoExample;
