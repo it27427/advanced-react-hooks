@@ -14,6 +14,12 @@ const UseCallbackExample = () => {
         <div className='col-md-6 mx-md-auto'>
           <div className='py-5'>
             <Button addTask={addTask} />
+
+            <div className='mt-4'>
+              {tasks.map((task, index) => (
+                <p key={index}>{task}</p>
+              ))}
+            </div>
           </div>
         </div>
       </div>
