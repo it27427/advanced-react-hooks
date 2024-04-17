@@ -6,7 +6,7 @@ const UseCallbackExample = () => {
 
   const addTask = useCallback(() => {
     setTasks((prevState) => [...prevState, 'Some Task']);
-  });
+  }, [setTasks]);
 
   return (
     <div className='container'>
